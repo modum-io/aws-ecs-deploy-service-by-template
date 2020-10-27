@@ -1,11 +1,11 @@
-# AWS ECS Update Service by Template Action
+# AWS ECS Deploy Service by Template Action
 
 A github action, that updates a service with a new image based on an existing task definition.
 
 ## Usage
 ```yaml
       - name: deploy to ECS
-        uses: modum-io/aws-ecs-deploy-service-by-template
+        uses: modum-io/aws-ecs-deploy-service-by-template@v1.0.0
         with:
           image: "modumio/sample@${{ steps.docker_build.outputs.digest }}"
           template-task-definition: sample_template
