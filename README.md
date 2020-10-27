@@ -23,7 +23,7 @@ This action relies on the [default behavior of the AWS SDK for Javascript](https
 ## Terraform
 This action can be useful if you use Terraform to manage your task definition and don't want terraform changes to trigger a new deployment. For this you can set up a 'blueprint' template task definition and service in Terraform like this:
 
-```
+```hcl
 resource "aws_ecs_task_definition" "sample" {
   family                   = "sample_template"
   [...]
