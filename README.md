@@ -5,7 +5,7 @@ A github action, that updates a service with a new image based on an existing ta
 ## Usage
 ```yaml
       - name: deploy to Dev
-        uses: modum-io/aws-ecs-update-service-by-template
+        uses: modum-io/aws-ecs-deploy-service-by-template
         with:
           image: "modumio/sample@${{ steps.docker_build.outputs.digest }}"
           template-task-definition: sample_template
