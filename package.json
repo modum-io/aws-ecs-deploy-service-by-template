@@ -1,0 +1,31 @@
+{
+  "name": "aws-ecs-deploy-service-by-template",
+  "version": "1.0.0",
+  "description": "Updates AWS service based on a template task definition.",
+  "main": "index.js",
+  "author": "Sebastian Stephan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/modum-io/aws-ecs-deploy-service-by-template.git"
+  },
+  "homepage": "https://github.com/modum-io/aws-ecs-deploy-service-by-template.git",
+  "keywords": [
+    "AWS",
+    "ECS",
+    "GitHub",
+    "Actions"
+  ],
+  "scripts": {
+    "build": "ncc build index.js",
+    "lint": "eslint **.js"
+  },
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@aws-sdk/client-ecs": "^1.0.0-rc.2"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.24.1",
+    "eslint": "^7.12.1"
+  }
+}

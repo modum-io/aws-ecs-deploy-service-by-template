@@ -1,0 +1,28 @@
+name: 'aws-ecs-deploy-service-by-template'
+description: 'Updates an existing task definition with a new image and deploys it to ECS.'
+branding:
+  icon: 'cloud'
+  color: 'orange'
+inputs:
+  template-task-definition:
+    description: 'The task definition to clone. Format: "family:revision" or "family" (for latest active).'
+    required: true
+  target-task-definition:
+    description: 'The family of the new task definition name to register.'
+    required: true
+  container-name:
+    description: 'The name of the container in the template task definition for which the image should be set.'
+    required: true
+  image:
+    description: 'The docker image to deploy.'
+    required: true
+  cluster:
+    description: 'The name of the ECS cluster in which the service runs.'
+    required: true
+    default: 'default'
+  service:
+    description: 'The name of the ECS service to update.'
+    required: true
+runs:
+  using: 'node12'
+  main: './dist/index.js'
